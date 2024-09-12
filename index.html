@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduNova</title>
+    <link rel="shortcut icon" href="favicon-32x32.png"> 
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <div class="login-container">
+        <!-- Adding logo above the title -->
+        <img src="logo.jpg" alt="Logo" class="logo">
+        <h1>Velammal Matriculation School</h1>
+        
+        <h2>Login</h2>
+        <form id="loginForm" action="/home" method="POST">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <!-- Set default username to "admin" -->
+                <input type="text" id="username" name="username" value="admin" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <!-- Set default password -->
+                <input type="password" id="password" name="password" value="password" required>
+            </div>
+            <div class="options">
+                <a href="/forgot-password" class="forgot-password">Forgot Password?</a>
+            </div>
+            <!-- Button triggers JavaScript function for login -->
+            <button type="button" onclick="performLogin()">Login</button>
+        </form>
+        <button class="admin-button" onclick="adminLogin()">Admin Login</button>
+    </div>
+
+    <script>
+        function performLogin() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Simple check for username and password (for demonstration purposes)
+            if (username === 'admin' && password === 'password') {
+                // Redirect to home page
+                window.location.href = "home.html";
+            } else {
+                alert('Incorrect username or password!');
+            }
+        }
+
+        function adminLogin() {
+            window.location.href = "admin.html";
+        }
+    </script>
+</body>
+</html>

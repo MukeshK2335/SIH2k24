@@ -1,0 +1,112 @@
+/* Reset and body styling for a clean slate */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f4f4f4; /* Light grey background for the entire page */
+    color: #333;
+}
+
+/* Main container styling for central content alignment */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    background: white;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Ensures the border-radius clips the content */
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #0062cc, #0096ff);
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    height: 60px; /* Adjust the logo size */
+    margin-right: 20px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-grow: 1; /* Allows the list to fill the nav space */
+}
+
+.navbar li {
+    padding: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.navbar a:hover, .navbar a:focus {
+    background-color: #004c8c;
+    border-radius: 5px;
+    transform: translateY(-2px);
+}
+
+/* Header styles */
+header {
+    background-color: #f9f9f9; /* Light background for the header */
+    text-align: center;
+    padding: 20px 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+header h1 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.school-id {
+    font-weight: bold;
+    color: #666;
+}
+
+/* Dashboard and card styles */
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.card {
+    flex: 1 1 300px; /* Flex basis of 300px with grow and shrink */
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    color: #0056b3;
+}
+
+.date {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
